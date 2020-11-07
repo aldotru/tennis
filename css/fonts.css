@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/fonts/HelveticaNeue\ Light.woff2") format("woff2"),
+       url("../assets/fonts/HelveticaNeue\ Light.woff") format("woff"),
+       url("../assets/fonts/HelveticaNeue\ Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/fonts/HelveticaNeue\ Medium.woff2") format("woff2"),
+       url("../assets/fonts/HelveticaNeue\ Medium.woff") format("woff"),
+       url("../assets/fonts/HelveticaNeue\ Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../assets/fonts/HelveticaNeue\ Bold.woff2") format("woff2"),
+       url("../assets/fonts/HelveticaNeue\ Bold.woff") format("woff"),
+       url("../assets/fonts/HelveticaNeue\ Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* .Text-Style-3 {
+  font-family: HelveticaNeue;
+  font-size: 53px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.28;
+  letter-spacing: -0.05px;
+  color: var(--white);
+}
+.Text-Style-4 {
+  font-family: HelveticaNeue;
+  font-size: 50px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: -0.06px;
+  color: #1e2335;
+}
+.Text-Style-2 {
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  color: var(--white);
+}
+.Text-Style {
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  color: var(--white);
+}
+.Text-Style-6 {
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.14px;
+  color: #2b3049;
+}
+.Text-Style-5 {
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.14px;
+  color: var(--white);
+} */
