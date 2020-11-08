@@ -71,6 +71,12 @@ a {
 
 /* / reusable */
 
+/* mobile menu */
+
+
+
+/* / mobile menu */
+
 /* navigation */
 
 .header {
@@ -152,7 +158,7 @@ a {
 }
 
 .header__lang-current {
-    font-weight: 400;
+    font-weight: 700;
 }
 
 /* / navigation */
@@ -205,7 +211,12 @@ a {
 
 .story {
     background-color: var(--gray-light-1);
-    padding: 72px 168px 67px 255px;
+    padding: 72px 0 67px 0;
+}
+
+.story .container {
+    margin: 0 auto;
+    max-width: 1014px;
 }
 
 .story__row {
@@ -495,3 +506,129 @@ a {
 /* / footer */
 
 /* media queries */
+
+@media only screen and (min-width: 90em) {
+
+    html {
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 67em) {
+
+    .header {
+        display: none;
+    }
+
+    .story {
+        padding: 72px 1.5rem 67px ;
+    }
+
+}
+
+@media only screen and (max-width: 57.5em) {
+
+    .story__row {
+        flex-direction: column;
+    }
+
+    .story__box-left {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .story__btn {
+        position: relative;
+            top: unset;
+            right: unset;
+    }
+
+    .story__info {
+        margin-bottom: 1.5rem;
+    }
+
+    .rackets {
+        flex-direction: column;
+    }
+
+    .rackets__box-left,
+    .rackets__header {
+        max-width: 100%;
+    }
+
+    .rackets__info {
+        max-width: 469px;
+    }
+
+    .rackets__box-right {
+        padding: 3.25rem 0 4.56rem 1.4rem;
+        width: 100%;
+    }
+
+    .rackets__box-left {
+        background-image: linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)),
+            url("../assets/img/ball-color-court@2x.jpg");
+        padding: 38px 1.5rem 62px;
+    }
+
+}
+
+@media only screen and (max-width: 48em) {
+
+    .hero {
+        padding: 0 1.5rem;
+    }
+
+    .hero::before {
+        display: none;
+    }
+
+    .footer {
+        padding: 64px 1.5rem 58px 1.5rem;
+    }
+
+    .footer__row {
+        flex-direction: column-reverse;
+        max-width: 609px;
+        margin: 0 auto;
+    }
+
+    .footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .footer__social-list {
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 35em) {
+    
+    html {
+        font-size: 14px;
+    }
+
+    .footer__item:not(:last-child) {
+        margin-right: 2.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 26.5625em) {
+
+    .footer__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+}
