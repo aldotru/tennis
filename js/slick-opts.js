@@ -11,10 +11,12 @@ $(document).ready(function () {
     swipeToSlide: true,
     variableWidth: true,
 
+    // Moving next/previous buttons outside the slick wrapper
     // @type {object} DOM node
     nextArrow: $('#slick__next'),
     prevArrow: $('#slick__previous'),
-
+    
+    // Moving next/previous buttons outside the slick wrapper
     // @type {object} DOM node
     appendDots: $('.rackets__slider-dots')
   });
