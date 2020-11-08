@@ -2,17 +2,25 @@
 
 :root {
     --yellow: #cbe346;
-    --blue-dark: #2b3049;
+    --blue-dark-1: #2b3049;
+    --blue-dark-2: #273048;
     --white: #fff;
-    --gray-light: #f3f4f8;
+    --gray-light-1: #f3f4f8;
+    --gray-light-2: #ebebeb;
+    --gray-dark: #787878;   
 }
 
 /* / variables */
 
 /* reset */
 
+::selection {
+    background-color: var(--blue-dark-1);
+    color: var(--yellow);
+}
+
 body {
-    color: ;
+    color: var(--blue-dark-1);
     font-family: "HelveticaNeue", sans-serif;
     font-weight: 400;
     font-size: 1.125rem;
@@ -30,22 +38,181 @@ a {
 /* reusable */
 
 .btn {
+    border: solid 1px;
+    border-radius: 100px;
+    font-size: 13px;
+    letter-spacing: 1.01px;
+    padding: 15px 31px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
 
+.btn--white {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn--white:focus,
+.btn--white:hover {
+    background-color: var(--white);
+    color: var(--blue-dark-2);
+}
+
+.btn--blue {
+    border-color: var(--blue-dark-2);
+    color: var(--blue-dark-2);
+}
+
+.btn--blue:focus,
+.btn--blue:hover {
+    background-color: var(--blue-dark-2);
+    color: var(--white);
 }
 
 /* / reusable */
 
+/* navigation */
+
+.header {
+    color: var(--white);
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    width: 100%;
+    padding: 44px 94px 44px 173px;
+    position: absolute;
+        top: 0;
+        left: 0;
+}
+
+.header__logo-link {
+    display: inline-block;
+    position: absolute;
+        top: 25px;
+        left: 36px;
+    z-index: 3;
+}
+
+.header__list {
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.header__item {
+    display: inline-block;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 3rem;
+}
+
+.header__link {
+    padding-bottom: 0.125rem;
+    position: relative;
+}
+
+.header__link::after {
+    content: '';
+    background-color: var(--white);
+    backface-visibility: hidden;
+    position: absolute;
+        bottom: 0;
+        left: 0;
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__link:visited::after,
+.header__link:hover::after,
+.header__link:focus::after {
+    width: 100%;
+}
+
+.header__link-current::after {
+    width: 17px;
+}
+
+.header__langs-list {
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.header__langs-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.header__langs-item {
+    font-weight: 100;
+}
+
+.header__lang-current {
+    font-weight: 400;
+}
+
+/* / navigation */
+
+/* hero */
+
+.hero {
+    background-color: var(--blue-dark-1);
+    background-image: url("../assets/img/hero@3x.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+        align-items: center;
+    padding-left: 173px;
+    /* position: relative; */
+}
+
+.hero::before {
+    content: '';
+    background-color: var(--white);
+    border: solid 2px var(--white);
+    position: absolute;
+        left: 105px;
+        top: 0;
+    height: 120%;
+    width: 1px;
+}
+
+.hero__info-box {
+    max-width: 709px;
+}
+
+.hero__header {
+    color: var(--white);
+    font-size: 3.3125rem;
+    line-height: 68px;
+    margin-bottom: 2rem;
+}
+
+.hero__header-span {
+    color: var(--yellow);
+    text-transform: capitalize;
+}
+
+/* / hero */
+
 /* story */
 
 .story {
-    background-color: var(--gray-light);
+    background-color: var(--gray-light-1);
     padding: 72px 168px 67px 255px;
 }
 
 .story__row {
     display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: left;
+    position: relative;
 }
 
 .story__box-left {
@@ -54,6 +221,7 @@ a {
     letter-spacing: 1.87px;
     line-height: 2;
     margin-right: 3.1875rem;
+    margin-top: 2rem;
     max-width: 174px;
     text-align: right;
     text-transform: uppercase;
@@ -67,23 +235,30 @@ a {
     font-size: 3.125rem;
     letter-spacing: 0.06px;
     line-height: 1.14;
+    margin-bottom: 1.5rem;
     max-width: 555px;
 }
 
-/* / story */
-
-/* hero */
-
-.hero {
-    background-color: var(--blue-dark);
-    background-image: url("../assets/img/hero@3x.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
+.story__header-span {
+    display: block;
 }
 
-/* / hero */
+.story__info {
+    color: var(--gray-dark);
+    max-width: 393px;
+}
+
+.story__btn {
+    position: absolute;
+        right: 0;
+        bottom: 0;
+}
+
+.story__btn-arrow {
+    margin-left: 5.2rem;
+}
+
+/* / story */
 
 /* rackets */
 
@@ -92,7 +267,7 @@ a {
 }
 
 .rackets__box-left {
-    background-color: var(--blue-dark);
+    background-color: var(--blue-dark-1);
     background-image: url("../assets/img/ball-color-court@3x.jpg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -114,7 +289,85 @@ a {
 }
 
 .rackets__info {
+    margin-bottom: 1rem;
     max-width: 303px;
+}
+
+.rackets__slider-dots {
+    margin-bottom: 2rem;
+}
+
+.rackets__slider-dots .slick-dots {
+    display: flex;
+        align-items: center;
+        justify-content: flex-start;
+}
+
+.rackets__slider-dots .slick-dots li {
+    display: inline-block;
+}
+
+.rackets__slider-dots .slick-dots li:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.rackets__slider-dots .slick-dots li button {
+    background-color: var(--gray-light-2);
+    border-radius: 100px;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    padding: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.rackets__slider-dots .slick-dots li.slick-active button {
+    background-color: var(--yellow);
+}
+
+.rackets__slider-btns {
+    display: flex;
+        align-items: center;
+        justify-content: flex-start;
+}
+
+.rackets__box-left #slick__previous,
+.rackets__box-left #slick__next {
+    border-radius: 100px;
+    border: solid 1px transparent;
+    cursor: pointer;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    width: 54px;
+    height: 54px;
+    transition: all 0.3s ease-in-out;
+}
+
+.rackets__box-left #slick__previous:hover,
+.rackets__box-left #slick__next:hover,
+.rackets__box-left #slick__previous:focus,
+.rackets__box-left #slick__next:focus {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
+}
+
+.rackets__box-left #slick__previous {
+    background-color: transparent;
+    border-color: var(--white);
+    margin-right: 1.1875rem;
+}
+
+.rackets__box-left #slick__previous .slick__button-icon {
+    transform: rotate(180deg);
+}
+
+.rackets__box-left #slick__next {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
 }
 
 .rackets__box-right {
@@ -123,15 +376,24 @@ a {
     padding: 3.25rem 0 4.56rem 3.25rem;
 }
 
-.rackets__slider {
-    display: flex;
-        align-items: center;
-        justify-content: space-between;
+.rackets__slider-wrapper {
+    overflow: hidden;
+}
+
+.rackets__slider .slick-list.draggable {
+    cursor: grab;
+    padding-left: 0 !important;
+}
+
+.rackets__slider .slick-list.draggable:active {
+    cursor: grabbing;
 }
 
 .rackets__item-box {
     margin-right: 2.25rem;
+    max-width: 288px;
     position: relative;
+    width: initial !important;
 }
 
 .rackets__number {
@@ -150,7 +412,7 @@ a {
 }
 
 .rackets__img {
-    max-width: 288px;
+    width: 100%;
 }
 
 /* / rackets */
@@ -158,10 +420,10 @@ a {
 /* banner */
 
 .banner {
-    background-color: var(--blue-dark);
+    background-color: var(--blue-dark-1);
     background-image: url("../assets/img/action-athlete-ball@3x.jpg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left center;
     background-size: cover;
     min-height: 586px;
 }
@@ -197,7 +459,7 @@ a {
 }
 
 .footer__link {
-    color: var(--blue-dark);
+    color: var(--blue-dark-1);
 }
 
 .footer__social-list {
