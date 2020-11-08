@@ -16,8 +16,10 @@
     <title>Tennis - Raquetas de alto rendimiento</title>
 </head>
 <body>
-    <header class="header">
+    <a href="#" class="header__logo-link">
         <img src="assets/img/logo-white.svg" alt="Tennis white logo" class="header__logo">
+    </a>
+    <header class="header">
         <nav class="header__nav">
             <ul class="header__list">
                 <li class="header__item">
@@ -37,7 +39,7 @@
         <nav class="header__langs">
             <ul class="header__langs-list">
                 <li class="header__langs-item">
-                    <a href="#" class="header__lang">ES</a>
+                    <a href="#" class="header__lang header__lang-current">ES</a>
                 </li>
                 <li class="header__langs-item">
                     <a href="#" class="header__lang">EN</a>
@@ -50,7 +52,7 @@
         <div class="container">
             <div class="hero__info-box">
                 <h1 class="hero__header">Las mejores raquetas para jugar <span class="hero__header-span">tennis</span></h1>
-                <a href="#" class="btn btn--white btn--blue">Acerca de nosotros &rarr;</a>
+                <a href="#" class="btn btn--white">Acerca de nosotros &rarr;</a>
             </div>
         </div>
     </section>
@@ -62,10 +64,10 @@
                     <p>tennis</p>
                 </div>
                 <div class="story__box-right">
-                    <h2 class="story__header">Raquetas.Accesorios.Pelotas.</h2>
+                    <h2 class="story__header">Raquetas.Accesorios.<span class="story__header-span">Pelotas.</span></h2>
                     <p class="story__info">Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.</p>
-                    <a href="#" class="btn btn--blue">Historia &rarr;</a>                    
                 </div>
+                <a href="#" class="btn btn--blue story__btn">Historia <span class="story__btn-arrow">&rarr;</span></a>                    
             </div>
         </div>
     </section>
@@ -74,26 +76,37 @@
         <div class="rackets__box-left">
             <h2 class="rackets__header">Nuestras <span class="rackets__header-span">Raquetas</span></h2>
             <p class="rackets__info">Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.</p>
+            <div class="rackets__slider-dots">
+                
+            </div>
+            <div class="rackets__slider-btns">
+                <button id="slick__previous">
+                    <img src="assets/img/play-icon.svg" alt="Previous icon" class="slick__button-icon">
+                </button>
+                <button id="slick__next">
+                    <img src="assets/img/play-icon.svg" alt="Previous icon" class="slick__button-icon">
+                </button>
+            </div>
         </div>
         <div class="rackets__box-right">
             <div class="rackets__slider-wrapper">
                 <div class="rackets__slider">
-                    <div class="rackets__item-box">
+                    <a class="rackets__item-box">
                         <span class="rackets__number">1</span>
                         <img src="assets/img/racket.png" alt="Raqueta 1" class="rackets__img">
-                    </div>
-                    <div class="rackets__item-box">
+                    </a>
+                    <a class="rackets__item-box">
                         <span class="rackets__number">2</span>
                         <img src="assets/img/racket.png" alt="Raqueta 2" class="rackets__img">
-                    </div>
-                    <div class="rackets__item-box">
+                    </a>
+                    <a class="rackets__item-box">
                         <span class="rackets__number">3</span>
                         <img src="assets/img/racket.png" alt="Raqueta 3" class="rackets__img">
-                    </div>
-                    <div class="rackets__item-box">
+                    </a>
+                    <a class="rackets__item-box">
                         <span class="rackets__number">4</span>
                         <img src="assets/img/racket.png" alt="Raqueta 4" class="rackets__img">
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -154,6 +167,10 @@
         </div>
     </footer>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/slick-opts.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
