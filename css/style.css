@@ -69,11 +69,93 @@ a {
     color: var(--white);
 }
 
+.show {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
 /* / reusable */
 
 /* mobile menu */
 
+.hamburguer__icon {
+    background-color: var(--blue-dark-1);
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: none;
+        justify-content: center;
+        align-items: center;
+    height: 37px;
+    width: 37px;
+    padding: 1rem 0;
+    position: fixed;
+        top: 25px;
+        right: 36px;
+    z-index: 11;
+    transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+}
 
+.hamburguer__icon span {
+    background-color: var(--yellow);
+    display: inline-block;
+    height: 2px;
+    width: 2rem;
+
+}
+    
+.hamburguer__nav {
+    background-color: var(--yellow);
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+        top: 0;
+        left: 0;
+    text-align: center;
+    transform: translateX(100%);
+    transition: all 1s cubic-bezier(0.85, 0, 0.15, 1);
+    visibility: hidden;
+    z-index: 10;
+}
+
+.hamburguer__logo {
+    opacity: 0.25;
+    position: absolute;
+        bottom: -120px;
+        left: -120px;
+    max-width: 500px;
+    width: 100%;
+    z-index: -1;
+}
+
+.hamburguer__item:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.hamburguer__link {
+    line-height: 1;
+    font-size: 3.3125rem;
+    text-transform: uppercase;
+}
+
+.hamburguer__link-lang {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.hamburguer__link-lang:nth-child(1) {
+    margin-right: 1.5rem;
+    font-weight: 700;
+}
 
 /* / mobile menu */
 
@@ -521,6 +603,10 @@ a {
         display: none;
     }
 
+    .hamburguer__icon {
+        display: flex;
+    }
+
     .story {
         padding: 72px 1.5rem 67px 1.5rem;
     }
@@ -596,6 +682,10 @@ a {
         line-height: initial;
     }
 
+    .hamburguer__logo {
+        max-width: 450px;
+    }
+
     .footer {
         padding: 64px 1.5rem 58px 1.5rem;
     }
@@ -620,6 +710,10 @@ a {
     
     html {
         font-size: 14px;
+    }
+
+    .hamburguer__logo {
+        max-width: 350px;
     }
 
     .footer__item:not(:last-child) {
