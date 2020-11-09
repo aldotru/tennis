@@ -40,7 +40,7 @@ a {
 .btn {
     border: solid 1px;
     border-radius: 100px;
-    font-size: 13px;
+    font-size: 0.8125rem;
     letter-spacing: 1.01px;
     padding: 15px 31px;
     text-transform: uppercase;
@@ -249,7 +249,7 @@ a {
 
 .hero {
     background-color: var(--blue-dark-1);
-    background-image: url("../assets/img/hero@3x.jpg");
+    background-image: url("../assets/img/hero@2x.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -361,7 +361,7 @@ a {
 
 .rackets__box-left {
     background-color: var(--blue-dark-1);
-    background-image: url("../assets/img/ball-color-court@3x.jpg");
+    background-image: url("../assets/img/ball-color-court@2x.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -505,7 +505,7 @@ a {
 }
 
 .rackets__img {
-    width: 100%;
+    width: 288px;
 }
 
 /* / rackets */
@@ -514,7 +514,7 @@ a {
 
 .banner {
     background-color: var(--blue-dark-1);
-    background-image: url("../assets/img/action-athlete-ball@3x.jpg");
+    background-image: url("../assets/img/action-athlete-ball@2x.jpg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: cover;
@@ -592,7 +592,26 @@ a {
 @media only screen and (min-width: 90em) {
 
     html {
-        font-size: 20px;
+        font-size: 125%;
+    }
+
+}
+
+@media only screen and (min-width: 75em) {
+
+    .hero {
+        background-image: url("../assets/img/hero@3x.jpg");
+    }
+
+    .banner {
+        background-image: url("../assets/img/action-athlete-ball@3x.jpg");
+    }
+
+    .rackets__box-left {
+        background-image: linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)),
+            url("../assets/img/ball-color-court@3x.jpg");
     }
 
 }
@@ -709,11 +728,26 @@ a {
 @media only screen and (max-width: 35em) {
     
     html {
-        font-size: 14px;
+        font-size: 87.5%;
     }
 
     .hamburguer__logo {
         max-width: 350px;
+    }
+
+    .hero {
+        background-image: url("../assets/img/hero.jpg");
+    }
+
+    .banner {
+        background-image: url("../assets/img/action-athlete-ball.jpg");
+    }
+
+    .rackets__box-left {
+        background-image: linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)),
+            url("../assets/img/ball-color-court.jpg");
     }
 
     .footer__item:not(:last-child) {
